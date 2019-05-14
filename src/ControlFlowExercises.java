@@ -17,5 +17,14 @@ public class ControlFlowExercises {
 //            System.out.println(y += 2);
             System.out.println(y -= 5);
         } while (y < 100 && y > -5);
+
+        System.out.println("************");
+
+        long x = 2;
+
+        do {
+            System.out.println(x);
+            x *= x;
+        } while (x <= 1000000);
     }
 }
