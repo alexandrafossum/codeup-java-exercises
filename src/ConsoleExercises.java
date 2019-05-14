@@ -7,21 +7,21 @@ public class ConsoleExercises {
 
 //        double pi = 3.14159;
 
-//        System.out.format("The value of pi is approximately %.f" + pi + ".");
+//        System.out.format("The value of pi is approximately " + pi + ".");
 
-//        System.out.print("Please enter a number:\n");
-//        int numberInput = scanner.nextInt();
-//        System.out.println("You entered: --> \"" + numberInput + "\" <--");
+        System.out.print("Please enter a number:\n");
+        int numberInput = scanner.nextInt();
+        System.out.println("You entered: --> \"" + numberInput + "\" <--");
 
-//        System.out.println("Please enter three words:\n");
-//        String wordOne = scanner.next();
-//        String wordTwo = scanner.next();
-//        String wordThree = scanner.next();
-//        System.out.println("You entered: " + wordOne + " " + wordTwo + " " + wordThree);
+        System.out.println("Please enter three words:\n");
+        String wordOne = scanner.next();
+        String wordTwo = scanner.next();
+        String wordThree = scanner.next();
+        System.out.println("You entered: " + wordOne + " " + wordTwo + " " + wordThree);
 
-//        System.out.println("Please enter a sentence:\n");
-//        String userSentence = scanner.nextLine();
-//        System.out.println("You entered: " + userSentence);
+        System.out.println("Please enter a sentence:\n");
+        String userSentence = scanner.nextLine();
+        System.out.println("You entered: " + userSentence);
 
         System.out.println("Enter the length of your classroom");
         int classroomLength = scanner.nextInt();
