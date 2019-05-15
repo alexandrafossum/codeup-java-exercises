@@ -4,65 +4,82 @@ import java.util.*;
 public class ControlFlowExercises {
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in).useDelimiter("\n");
 
-//        int a = 5;
-//
-//        while (a <= 15) {
-//            System.out.println(a++);
-//        }
-//
-//        System.out.println("************");
-//
-//        int y = 100;
-//
-//        do {
-////            System.out.println(y += 2);
-//            System.out.println(y -= 5);
-//        } while (y < 100 && y > -5);
-//
-//        System.out.println("************");
-//
-//        long x = 2;
+        int a = 5;
+
+        while (a <= 15) {
+            System.out.println(a);
+            a++;
+        }
+
+        System.out.println("************");
+
+//        int b = 0;
 //
 //        do {
-//            System.out.println(x);
-//            x *= x;
-//        } while (x <= 1000000);
+//            if (b % 2 == 0) {
+//                System.out.println(b);
+//            }
 //
-//        System.out.println("************");
-//
-//        for (int i = 5; i <=15; i++) {
-//            System.out.println(i);
-//        }
-//
-//        System.out.println("************");
-//
-//        for (int i = 0; i <= 100; i += 2) {
-//            System.out.println(i);
-//        }
-//
-//        System.out.println("************");
-//
-//        for (int i = 100; i > -10; i -=5) {
-//            System.out.println(i);
-//        }
+//        } while (b <= 100);
+
+        System.out.println("************");
+
+        int c = 100;
+
+        do {
+            System.out.println(c -= 5);
+        } while (c >= -5);
+
+        System.out.println("************");
+
+        long d = 2;
+
+        do {
+            System.out.println(d);
+            d *= d;
+        } while (d <= 1000000);
+
+        System.out.println("************");
+
+        for (int e = 5; e <= 15; e++) {
+            System.out.println(e);
+        }
+
+        System.out.println("************");
+
+        for (int f = 0; f <= 100; f += 2) {
+            System.out.println(f);
+        }
+
+        System.out.println("************");
+
+        for (int g = 100; g > -10; g -=5) {
+            System.out.println(g);
+        }
+
+        System.out.println("************");
+
+        for (long h = 2; h < 1000000; h *= h) {
+            System.out.println(h);
+        }
+
+        System.out.println("************");
 
         //FIZZBUZZ
 
-//        int b = 1;
-//
-//        for (b = 1; b <= 100; b++) {
-//            if ((b % 15) == 0) {
-//                System.out.println("fizzbuzz");
-//            } else if ((b % 3) == 0) {
-//                System.out.println("fizz");
-//            } else if ((b % 5) == 0) {
-//                System.out.println("buzz");
-//            } else {
-//                System.out.println(b);
-//            }
-//        }
+        for (int i = 1; i <= 100; i++) {
+            if ((i % 15) == 0) {
+                System.out.println("fizzbuzz");
+            } else if ((i % 5) == 0) {
+                System.out.println("buzz");
+            } else if ((i % 3) == 0) {
+                System.out.println("fizz");
+            } else {
+                System.out.println(i);
+            }
+        }
 
 
         //TABLE OF POWERS
@@ -78,21 +95,13 @@ public class ControlFlowExercises {
 
             System.out.println("Here is your table!");
 
-            System.out.println("Number");
+            System.out.println("Number | Squared | Cubed");
+            System.out.println("-------|---------|------");
 
-            for (int i = 1; i <= numPrompt; i++) {
-                System.out.println(i);
-            }
-
-            System.out.println("Squared");
-
-            for (int i = 1; i <= numPrompt; i++) {
-                System.out.println(i * i);
-            }
-
-            System.out.println("Cubed");
-            for (int i = 1; i <= numPrompt; i++) {
-                System.out.println(Math.pow(i, 3));
+            for (int j = 1; j <= numPrompt; j++) {
+                int squared = j * j;
+                int cubed = j * j * j;
+                System.out.printf("%-7d| %-9d|%-6d%n", j, squared, cubed);
             }
         } else {
             System.out.println("Sorry, we can't continue without your consent.");
@@ -101,10 +110,16 @@ public class ControlFlowExercises {
 
         //CONVERT GIVEN NUMBER TO LETTER GRADES
 
-        System.out.println("Enter a number between 0 and 100");
-        int numberGrade = sc.nextInt();
 
-            if (numberGrade > 88) {
+        System.out.println("Do you want to continue?");
+        String userAnswer = sc.next();
+
+        if (userAnswer.equalsIgnoreCase("yes")) {
+
+            System.out.println("Enter a number between 0 and 100");
+            int numberGrade = sc.nextInt();
+
+            if (numberGrade >= 88) {
                 System.out.println("A");
             } else if (numberGrade >= 80) {
                 System.out.println("B");
@@ -112,9 +127,13 @@ public class ControlFlowExercises {
                 System.out.println("C");
             } else if (numberGrade >= 60) {
                 System.out.println("D");
-            } else {
+            } else if (numberGrade >= 0){
                 System.out.println("F");
             }
+
+        } else {
+            System.out.println("Sorry, you didn't give your consent");
+        }
 
 
 
