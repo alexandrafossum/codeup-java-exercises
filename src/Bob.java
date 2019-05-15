@@ -22,11 +22,29 @@ public class Bob {
             System.out.println("Whatever.");
         }
 
-    }
-    public static String sayHello(String name) {
-        Scanner sc = new Scanner(System.in);
+        //Walk-through version
 
-        name = sc.nextLine();
-        return String.format("Hello, %s!", name);
+        System.out.println("Talk to Bob?");
+        String answer = sc.next();
+
+        if (answer.equalsIgnoreCase("yes")) {
+            System.out.println("Say something to Bob.");
+            String userInput = sc.next();
+
+            do {
+                userInput = sc.next();
+
+                if (userInput.endsWith("?")) {
+                    System.out.println("Sure");
+                } else if (userInput.endsWith("!")) {
+                    System.out.println("Chill out!");
+                } else if (userInput.equals("")) {
+                    System.out.println("Fine be like that");
+                } else {
+                    System.out.println("Whatever");
+                }
+
+            } while (!userInput.equals("You're grounded!"));
+        }
     }
 }
