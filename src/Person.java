@@ -4,10 +4,12 @@ class Person {
 
 
     public String getName() { //returns the person's name
+
         return this.name;
     }
 
     public void setName(String personName) { //changes the NAME property to the passed value
+
         this.name = personName;
     }
 
